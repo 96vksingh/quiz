@@ -4,4 +4,7 @@
     <string name="science">SCIENCE</string>
     <string name="english">ENGLISH</string>
     <string name="computers">COMPUTERS</string>
+    <string name="mq1">q1</string>
+    <string name="mq2">q2</string>
+    <string name="mq3">q3</string>
 </resources>
