@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">quiz</string>
+    <string name="maths">MATHS</string>
+    <string name="science">SCIENCE</string>
+    <string name="english">ENGLISH</string>
+    <string name="computers">COMPUTERS</string>
 </resources>
