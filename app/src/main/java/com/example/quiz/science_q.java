@@ -19,7 +19,7 @@ public class science_q extends AppCompatActivity {
     private RadioGroup s1,s2,s3;
     private TextView y;
     private RadioButton ss1,ss2,ss3,ss4,ss5,ss6,ss7,ss8,ss9,ss10,ss11,ss12;
-    int sel_id;
+
     int qq1=0,qq2=0,qq3=0,cc=0;
     StringBuilder d = new StringBuilder();
 
@@ -94,16 +94,6 @@ y = findViewById(R.id.textView7);
                 }
             }
         });
-       // int selectedId = s1.getCheckedRadioButtonId();
-
-
-//        ss1.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Toast.makeText(getApplicationContext(),"hey u did here",Toast.LENGTH_SHORT).show();
-//                alert1.show();
-//            }
-//        });
 
         ss5 =  findViewById(R.id.radioButton9);
         ss6 = findViewById(R.id.radioButton10);
