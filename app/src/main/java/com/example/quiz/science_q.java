@@ -57,6 +57,11 @@ public class science_q extends AppCompatActivity {
             }
         });
         final AlertDialog alert1 = builder1.create();
+        final AlertDialog alert2 = builder2.create();
+        ss1 = findViewById(R.id.radioButton5);
+        ss2 = findViewById(R.id.radioButton6);
+        ss3 = findViewById(R.id.radioButton7);
+        ss4 = findViewById(R.id.radioButton8);
 
 
         s1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -64,16 +69,15 @@ public class science_q extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
                 RadioButton g = radioGroup.findViewById(i);
-                if(null != g && i > -1){
+                if(ss1 == g){
                     alert1.show();
+                }else{
+                    alert2.show();
                 }
             }
         });
        // int selectedId = s1.getCheckedRadioButtonId();
-        ss1 = findViewById(R.id.radioButton5);
-        ss2 = findViewById(R.id.radioButton6);
-        ss3 = findViewById(R.id.radioButton7);
-        ss4 = findViewById(R.id.radioButton8);
+
 
 //        ss1.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -92,6 +96,32 @@ public class science_q extends AppCompatActivity {
         ss10 = findViewById(R.id.radioButton26);
         ss11= findViewById(R.id.radioButton27);
         ss12 = findViewById(R.id.radioButton28);
+
+        s2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @SuppressLint("ResourceType")
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                RadioButton g = radioGroup.findViewById(i);
+                if(ss9 == g){
+                    alert1.show();
+                }else{
+                    alert2.show();
+                }
+            }
+        });
+
+        s3.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @SuppressLint("ResourceType")
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                RadioButton g = radioGroup.findViewById(i);
+                if(ss12 == g){
+                    alert1.show();
+                }else {
+                    alert2.show();
+                }
+            }
+        });
 
 
 //        ss6.setOnClickListener(new View.OnClickListener() {
