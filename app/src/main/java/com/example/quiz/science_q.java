@@ -11,13 +11,17 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class science_q extends AppCompatActivity {
     private Button bb;
     private RadioGroup s1,s2,s3;
+    private TextView y;
     private RadioButton ss1,ss2,ss3,ss4,ss5,ss6,ss7,ss8,ss9,ss10,ss11,ss12;
     int sel_id;
+    int qq1=0,qq2=0,qq3=0,cc=0;
+    StringBuilder d = new StringBuilder();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +33,7 @@ public class science_q extends AppCompatActivity {
         s1 = findViewById(R.id.saq1);
         s2 = findViewById(R.id.radioGroup2);
         s3 = findViewById(R.id.radioGroup);
-
+y = findViewById(R.id.textView7);
         bb= findViewById(R.id.button);
         bb.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,7 +53,7 @@ public class science_q extends AppCompatActivity {
             }
         });
         AlertDialog.Builder builder2 = new AlertDialog.Builder(this);
-        builder2.setMessage("uhhhh! it is the wrong answer");
+        builder2.setMessage("uhhhh! its seems u left some questions");
         builder2.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
@@ -68,11 +72,25 @@ public class science_q extends AppCompatActivity {
             @SuppressLint("ResourceType")
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if(qq1 == 0){
+                    cc= cc+1;
+                }
+
                 RadioButton g = radioGroup.findViewById(i);
                 if(ss1 == g){
-                    alert1.show();
+                    //alert1.show();
+                    if(qq1 == 0){
+                        d.append("\n1st is correct ");
+                        qq1=1;
+                    }
+
                 }else{
-                    alert2.show();
+                    //alert2.show();
+                    if(qq1 ==0){
+                        d.append("\n1st is wrong ");
+                        qq1=-1;
+                    }
+
                 }
             }
         });
@@ -101,11 +119,25 @@ public class science_q extends AppCompatActivity {
             @SuppressLint("ResourceType")
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if(qq2 == 0){
+                    cc=cc+1;
+                }
+
                 RadioButton g = radioGroup.findViewById(i);
                 if(ss9 == g){
-                    alert1.show();
+                   // alert1.show();
+                    if(qq2 ==0){
+                        d.append("\n2nd is correct ");
+                        qq2=1;
+                    }
+
                 }else{
-                    alert2.show();
+                    //alert2.show();
+                    if(qq2 == 0){
+                        d.append("\n2nd is wrong");
+                        qq2=-1;
+                    }
+
                 }
             }
         });
@@ -114,34 +146,45 @@ public class science_q extends AppCompatActivity {
             @SuppressLint("ResourceType")
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if(qq3 == 0){
+                    cc=cc+1;
+                }
+
                 RadioButton g = radioGroup.findViewById(i);
                 if(ss12 == g){
-                    alert1.show();
+                   // alert1.show();
+                    if(qq3 == 0){
+                        d.append("\n3rd is correct ");
+                        qq3=1;
+                    }
+
                 }else {
-                    alert2.show();
+                    //alert2.show();
+                    if(qq3 == 0){
+                        d.append("\n3rd is wrong ");
+                        qq3=-1;
+                    }
+
                 }
             }
         });
 
+        y.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
-//        ss6.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Toast.makeText(getApplicationContext(),"hey u did here",Toast.LENGTH_SHORT).show();
-//                alert1.show();
-//            }
-//        });
-        if(ss1.isChecked()){
-            alert1.show();
-        }
+                if(cc==3){
+                    y.setText(d);
+                }else{
+alert2.show();
+                }
 
-//        ss12.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Toast.makeText(getApplicationContext(),"hey u did here",Toast.LENGTH_SHORT).show();
-//                alert1.show();
-//            }
-//        });
+            }
+        });
+
+
+
+
 
 
 
