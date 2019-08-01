@@ -4,7 +4,7 @@
     <string name="science">SCIENCE</string>
     <string name="english">ENGLISH</string>
     <string name="computers">COMPUTERS</string>
-    <string name="mq1">q1</string>
-    <string name="mq2">q2</string>
-    <string name="mq3">q3</string>
+    <string name="mq1">Question 1. The average of first 50 natural numbers is …………. .</string>
+    <string name="mq2">Question 2. A fraction which bears the same ratio to 1/27 as 3/11 bear to 5/9 is equal to ……….. .</string>
+    <string name="mq3">Question 3. The number of 3-digit numbers divisible by 6, is ………….. .</string>
 </resources>
